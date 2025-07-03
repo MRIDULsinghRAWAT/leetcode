@@ -1,1 +1,37 @@
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
+// merge krrdete  hai sabse phele bhai
+int[]merge_arr =new int[nums1.length+nums2.length] ;
+
+// copy both arrays into ->  merged arrays
+
+System.arraycopy(nums1,0,merge_arr,0,nums1.length);
+System.arraycopy(nums2,0,merge_arr,nums1.length,nums2.length); 
+// second copy to start after the first array ends:
+
+// from nums1, starting at index 0
+// To merged, starting at index 0
+// For nums1.length elements      
+
+// sort aise krrte h
+Arrays.sort(merge_arr);
+
+// ab sorted arrays ka median return krrenge / nikalenge
+
+// What is the Median?
+// Odd number of elements → the middle element
+// Even number of elements → the average of the two middle elements
+int n =merge_arr.length;
+double median;
+if(n%2==0){ // even h agr arrays 
+median =(merge_arr[n/2] + merge_arr[(n/2)-1])/2.0;
+
+}
+else { // for odd 
+median =(merge_arr[n/2]);
+
+    }
+    return median;
+}
+}
