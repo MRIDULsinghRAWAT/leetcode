@@ -1,0 +1,104 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+
+// imp*********************
+
+// nth node remove krrne ka logic :
+
+// Approach: Two Pointer Technique (Tortoise-Hare / Fast-Slow)
+
+ // issmei kya karenge kiii jo link skip krrna h usse point nahi krrenge uske aage wla apoint krr denge 
+
+
+// total length nikali yahan pe
+int count = 0;
+ListNode currentnode =head;
+while(currentnode!=null)
+{
+    count ++;
+currentnode = currentnode.next ; 
+}
+
+// agar head remove hua tab 
+ if (n==count){
+      return head.next;  
+
+ }
+
+// traverse hua h yhan count-n-1 th node 
+ currentnode = head;
+ for(int i=0; i<count-n-1 ; i++){
+    currentnode = currentnode.next ;
+ }
+
+// nth node remove kia 
+if(currentnode.next !=null){
+currentnode.next = currentnode.next.next;
+
+}
+    return head;
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* approach dekh remove krrne ka kisi bhi node ko 
+
+       Java Code Example: Remove all nodes with value val
+---------------------------------------------
+       public ListNode removeElements(ListNode head, int val) {
+   
+    // Step 1: Remove head nodes with matching val
+    while (head != null && head.val == val) {
+        head = head.next;
+    }
+
+    // Step 2: Traverse and remove rest
+    ListNode current = head;
+
+    while (current != null && current.next != null) {
+        if (current.next.val == val) {
+            current.next = current.next.next; // Remove it
+        } else {
+            current = current.next;
+        }
+    }
+
+    return head;
+}
+  */ 
+
+    }
+}
