@@ -1,0 +1,47 @@
+import java.util.*;
+//Brute force approach 
+// take 1 element jo ki baaki saare element check karega 
+ 
+// in this q a array is given uss mei se humme 2 number find out krrne h jiska sum target ke equal hoga 
+
+// array ka size input hua
+// array ke element input k
+// target value input hue
+
+
+// public class Solution {
+//     public int[] twoSum(int[] nums, int target) {
+//         // pair finding (jinka sum target ke equal ho)
+//         for(int i = 0; i < nums.length; i++) {
+//             for(int j = i + 1; j < nums.length; j++) {
+//                 if(nums[i] + nums[j] == target) {
+//                     System.out.println(i + " " + j);
+//                     return new int[]{ i, j };
+//                 }
+//             }
+//         }
+//         return new int[] {};
+//     }
+// }
+
+ public class Solution {
+ public int[] twoSum(int[]num,int target) {
+//     public int[] twoSum(
+//     int[] num,
+//     int target
+// )
+// {
+
+ // pair finding (jinka sum target ke equal ho
+ for(int i = 0; i < num.length; i++) {
+    for(int j=i+1;j<num.length;j++) // i+1 isiliye kuinki ( to avoid  repeating or rechecking the same pairs )
+    {
+         if(num[i]+num[j]==target){
+             System.out.println(i+""+j); //
+             return new int[]{ i, j };
+                     }
+     }
+ }
+    return new int[] {}; // fall back ki target not found (else wALA)
+ }       
+}
