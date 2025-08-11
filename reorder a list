@@ -1,0 +1,71 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public void reorderList(ListNode head) {
+        /**approach 
+        -find middle node
+        -2 parts 
+        -2nd part ko reverse 
+        -then add 1st and reversed part 
+         */
+
+         // faalback 
+if(head ==null || head.next ==null){
+    return ;
+}
+
+
+ ListNode slow=head;
+ ListNode fast =head;
+  while(fast !=null && fast.next!=null){
+    slow=slow.next;  // 1 sttep se aage 
+    fast=fast.next.next;  // yeh wala 2 step se aage 
+
+  }
+ // return slow ;  // yeh middle node nikaqla gaya bc
+ 
+
+  // yahin se reverse (second half)
+ListNode second = reverseList(slow.next);
+
+slow.next =null;   /// divide the ll
+
+
+// ab merge   -----   (yeh complicated h )
+ListNode first =head;
+while(second!=null)
+{
+    ListNode phela =first.next;
+    ListNode dusra =second.next;
+
+/////////// yeh kyaaaaaaaaaaaaaa hhhh
+    first.next =second;
+    second.next =phela;
+
+first =phela;
+second = dusra;
+ }
+}
+// firse reverse wala logic laga denge yahan 
+private ListNode reverseList(ListNode head) {
+ListNode prev= null;
+ListNode current = head;
+
+ while(current != null)
+ {
+    ListNode next = current.next; // 2nd node 
+    current.next = prev;
+    prev = current;
+    current =next;
+ }               //// firse ekuiiiinnnn bc reverse
+ return prev;
+    }
+}
