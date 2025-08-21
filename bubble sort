@@ -1,0 +1,60 @@
+class Solution {
+    public int[] sortArray(int[] nums) {
+// bubble sort mei hum 2 elements ko compare krrte krrte sort kkrrte hai till the time wo sort nah ho jaaye 
+      
+// bubble sort use krrte hai 
+/**
+1> step  
+(n-1) iterations   --- loops lagayenge 
+
+2> step 
+2 iteration 
+
+{4 1 5 2 3}
+4 and 1 ko compare krrte haiii 
+swap keeke 4 peeche 
+...
+then end tak compare krrte rahenge  aur largest ko last mei push krr dete hai 
+
+fir 2nd iteration 
+bache hue elements ko firse compare krrke swap karenge
+
+fir 3rd iteration 
+
+fir 4th 
+
+rukna nahii haiii 
+
+jab saare elemnt shai jagah pe hai to array sort ho jayega 
+
+
+ */
+
+
+//psedo code 
+// for(int =0;i<n-1;i++){
+// 
+//n-i-1    inner loop 
+// for(int j=0;j<n-i-1;j++){
+    //} if(arr[j]>arr[j+1])
+    // swap (arr[j],a[j+1])
+
+int n=nums.length; // 
+for(int i=0;i<n-1;i++){
+    for(int j=0;j<n-i-1;j++){
+        if(nums[j]>nums[j+1]){
+         
+           // swap([arr[j] and arr[j+1]]);
+int temp =nums[j];   // 3rd variable ke throgh  swapping
+nums[j]=nums[j+1];
+nums[j+1]=temp;
+
+        }
+    }
+
+}
+
+return nums;
+
+    }
+}
