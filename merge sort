@@ -1,0 +1,107 @@
+class Solution {
+    public int[] sortArray(int[] nums) {
+// merge sort 
+
+/**
+divide and conquer
+
+->saare elements ko divide krrdo phele in single elements 
+-> then sort them 
+
+exmaple{6 3 9 5 2 8}
+6    3    9   5   2   8
+
+ab conquer 
+3,6      9          2,5        8
+
+ 3,6,9              2,5,8
+
+ab sabko sath mei krrdete hai 
+2,3,5,6,8,9
+
+ */
+ // approach discuss time !
+ // ek starting index ek ending index 
+ // then mid calculate
+ // 
+
+ 
+ 
+ mergeSort(nums,0,nums.length-1);
+ return nums;
+    }
+    // recursive mergesort function 
+    private void mergeSort(int[]arr,int left,int right){
+        if(left>=right){
+            return;
+        }
+    
+  // int  mid =(left+right)/2;
+     //use this
+int mid =left+(right-left)/2;
+
+     // 2 mei divide hogaya hai  
+     mergeSort(arr,left,mid);
+     mergeSort(arr,mid+1,right);
+
+     // merge both sorted hlfff
+     merge(arr,left,mid,right);
+ }
+
+ // function to merge 2 sorted halves
+  private void merge(int[] arr, int left, int mid, int right) {
+ 
+ // size calculation 
+     int left1 = mid-left+1;   // 2-0+1=3=
+     int right2 = right - mid;  //  5-2=3
+
+
+/** 
+index  0  1  2   3  4  5
+arr = [2, 5, 7 | 1, 3, 6]  
+        left    mid     right
+*/
+  
+// temporary array bnadete hai ab 
+int[]L=new int[left1];
+int[]R =new int [right2];
+
+
+// data 
+for (int i = 0; i < left1; i++){
+ L[i] = arr[left + i];
+}
+for (int j = 0; j < right2; j++) {
+    R[j] = arr[mid + 1 + j];
+}
+// mab merge waps 
+int i=0,j=0,k=left;
+// k array ka final merged array fill krrne ke liye 
+
+
+while(i<left1&&j<right2){
+    if(L[i]<=R[j]){
+        arr[k++]=L[i++];
+       } else{
+            arr[k++]=R[j++];
+        }
+}
+        /**Example 
+
+Compare 2 & 1 → 1 chhota → arr[0] = 1
+Compare 2 & 3 → 2 chhota → arr[1] = 2
+Compare 5 & 3 → 3 chhota → arr[2] = 3
+Compare 5 & 6 → 5 chhota → arr[3] = 5
+Compare 7 & 6 → 6 chhota → arr[4] = 6 */
+    
+while(i<left1){
+    arr[k++]=L[i++];
+    
+}
+while(j<right2){
+    arr[k++]=R[j++];
+
+}
+}
+
+    }
