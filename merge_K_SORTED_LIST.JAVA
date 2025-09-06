@@ -52,6 +52,11 @@ return head1 == null ? head2 : head1; //condition ? if_true : if_false;
 }
 // case 1 
    if (head1.val <= head2.val){   //h1<=h2
+   /**
+   Agar head1 ke node ka value chhota ya barabar hai head2 ke node ke value se, tab condition true hogi.
+
+Example:
+head1.val = 2, head2.val = 5 → 2 <= 5 → true */
 head1.next = mergeTwoLists(head1.next,head2);
 return head1;
    }else{
