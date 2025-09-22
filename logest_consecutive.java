@@ -22,7 +22,7 @@ Update karo boundary values:
 
 map.put(num, currLen)
 map.put(num - left, currLen)
-map.put(num + right, currLen)
+map.put(num + righmat, currLen)
 
 */
     HashMap<Integer,Integer> map = new HashMap<>();
