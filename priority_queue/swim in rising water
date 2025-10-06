@@ -1,0 +1,38 @@
+class Solution {
+    public int swimInWater(int[][] grid) {
+
+//shortest path find karenge ismei
+
+int n=grid.length;
+boolean[][]visited=new boolean[n][n];         //--------
+PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> a[0] - b[0]);
+
+//naya element add krrte hai 
+pq.offer(new int[]{grid[0][0],0,0});
+visited[0][0]=true;
+
+int maximumheight=0;
+int[][]directions={{1,0},{-1,0},{0,1},{0,-1}};
+while(!pq.isEmpty()){
+    int []current=pq.poll();  // remove krrne ke liye 
+    int height = current[0], row = current[1], column = current[2];
+    maximumheight=Math.max(maximumheight,height);
+
+    //q mwi dia h (if final destination pahunche to)
+    if(row==n-1&&column==n-1)return maximumheight;      
+    //--------------------------------------------------------------------
+
+for(int[] d:directions){
+int newrow= row + d[0];
+int newcolumn =column + d[1];
+/////////////////////// n*n  n grid ka size se compare yrrrr
+if(newrow>=0 && newcolumn>=0 && newrow < n && newcolumn < n &&  !visited[newrow][newcolumn]){
+visited[newrow][newcolumn]=true;
+pq.offer(new int[]{grid[newrow][newcolumn],newrow,newcolumn});
+}
+}
+}
+
+return -1;
+    }
+}
