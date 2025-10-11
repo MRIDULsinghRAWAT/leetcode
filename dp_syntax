@@ -1,0 +1,38 @@
+class syntax {
+    public long solveWithDP(int[] input) {
+        
+        // 1. Preprocessing (Optional but crucial for this problem)
+        // Convert the input into a simpler, sorted set of unique items.
+        // This is done to create the index for the DP array.
+
+        // 2. Define the DP Array (The "Cache")
+        // dp[i] will store the optimal answer for the subproblem ending at index 'i'.
+        int n = /* size of your simplified data */;
+        long[] dp = new long[n];
+        
+        // 3. Base Cases (Start of the Recurrence)
+        // Fill in the answer for the smallest subproblems.
+        if (n == 0) return 0;
+        dp[0] = /* answer for the first item */;
+        
+        // 4. The DP Transition (The main loop)
+        // Loop through all remaining subproblems.
+        for (int i = 1; i < n; i++) {
+            
+            // a. Calculate the answer if we DO NOT include the current item 'i'.
+            long skip = dp[i - 1]; 
+            
+            // b. Calculate the answer if we DO include the current item 'i'.
+            // This is the value of 'i' PLUS the best result from a previous, valid state (k).
+            // This 'k' is what makes DP complicated—you have to find it!
+            long take = /* value of item i */ + dp[k]; 
+            
+            // c. Store the optimal choice.
+            dp[i] = Math.max(take, skip);
+        }
+        
+        // 5. Final Answer
+        // The answer is usually the last element of the DP array.
+        return dp[n - 1];
+    }
+}
