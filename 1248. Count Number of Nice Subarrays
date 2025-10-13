@@ -1,0 +1,30 @@
+class Solution {
+    public int numberOfSubarrays(int[] nums, int k) {
+        
+        //leetcode 930 similar h 
+        /**logic
+        odd=1; even =0
+        sum of odd - ka count maintain krrenge
+        prefix-k map mei hua 
+        update
+         */
+        
+    
+        Map<Integer,Integer> map= new HashMap<>();
+        map.put(0,1);
+        int prefixsum=0;
+        int result=0;
+        
+        for(int num: nums){
+            
+            prefixsum=prefixsum + num % 2; 
+            result= result+ map.getOrDefault(prefixsum-k,0);
+            map.put(prefixsum,map.getOrDefault(prefixsum,0)+1);
+            
+        }
+
+return result;
+
+    
+    }
+}
