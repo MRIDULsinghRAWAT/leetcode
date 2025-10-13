@@ -1,0 +1,33 @@
+class SlidingWindow {
+    
+    // Example: Find the maximum sum of all subarrays of size K
+    public int solveFixedWindow(int[] arr, int k) {
+        if (k > arr.length) return 0;
+
+        int currentSum = 0;
+        int maxSum = 0;
+
+        // 1. Calculate the sum for the initial window (0 to k-1)
+        for (int i = 0; i < k; i++) {
+            currentSum += arr[i];
+        }
+
+        maxSum = currentSum; // Record the first result
+
+        // 2. Slide the window one step at a time
+        // 'R' (Right) is the index of the element entering the window
+        for (int R = k; R < arr.length; R++) {
+            
+            // Add the new element (R)
+            currentSum += arr[R]; 
+            
+            // Subtract the element leaving the window (L = R - k)
+            currentSum -= arr[R - k]; 
+
+            // Update the result for the new window
+            maxSum = Math.max(maxSum, currentSum);
+        }
+
+        return maxSum;
+    }
+}
