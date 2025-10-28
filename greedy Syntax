@@ -1,0 +1,26 @@
+// Step 1: Sort the items by their "value per weight" ratio (descending order)
+Arrays.sort(items, (a, b) -> {
+    double ratio1 = (double)a.value / a.weight;
+    double ratio2 = (double)b.value / b.weight;
+    return Double.compare(ratio2, ratio1); // descending order
+});
+
+// Step 2: Initialize total value and remaining capacity
+double totalValue = 0;
+int remainingCapacity = capacity;
+
+// Step 3: Loop through sorted items and pick greedily
+for (Item item : items) {
+    if (remainingCapacity >= item.weight) {
+        // Take full item
+        totalValue += item.value;
+        remainingCapacity -= item.weight;
+    } else {
+        // Take fractional part if not enough capacity
+        totalValue += item.value * ((double) remainingCapacity / item.weight);
+        break; // Bag is full
+    }
+}
+
+// Step 4: Output result
+System.out.println("Maximum value = " + totalValue);
