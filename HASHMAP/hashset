@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+class Solution {
+    
+    public int[] getSneakyNumbers(int[] nums) {
+        
+        Set<Integer> seen = new HashSet<>();
+        List<Integer> duplicates = new ArrayList<>();
+        
+        for (int num : nums) {
+            
+            // CORE LOGIC: Check if the number is a duplicate in a single O(1) step.
+            // set.add(element) returns 'false' only if the element already existed.
+            // Thus, '!seen.add(num)' is TRUE only for duplicates.
+            if (!seen.add(num)) {
+                duplicates.add(num);
+            }
+        }
+        
+        // Conversion logic (Necessary step to meet the function's return type)
+      int[] result = new int[list.size()];   // conversion
+        for (int i = 0; i < list.size(); i++) {
+            result[i] =list.get(i);
+        }
+        return result;
+    }
+}
