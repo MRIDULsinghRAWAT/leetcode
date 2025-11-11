@@ -1,3 +1,4 @@
+package TREE;
 public class min_depth_tree {
     
 }

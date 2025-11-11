@@ -1,3 +1,4 @@
+package Two_pointer_sliding_window.Pattern1;
 public class Pattern_1_fixed_window_size {
     public static int maxSumSubarray(int[] arr, int k) {
         int n = arr.length;
