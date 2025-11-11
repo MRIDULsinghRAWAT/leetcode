@@ -1,23 +1,35 @@
-import java.util.HashMap;
 public class leetcode_2461 {
 	public long maximumSubarraySum(int[] nums, int k) {
-        int left=0;
-        long maximum=Long.MIN_VALUE;
-        long sum=0;
-        HashMap<Integer,Integer> map=new HashMap<>();
+        int left = 0;
+        long maximum = Long.MIN_VALUE;
+        long sum = 0;
+        boolean[] duplicate = new boolean[100001];
         for (int i = 0; i < nums.length; i++) {
-            if(sum ==k){
-                Math.max(sum,maximum);
-                sum=sum-nums[left];
-                left++;
-            }else{
-                sum=sum+nums[i];
-                map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            while (duplicate[nums[i]]) {
+                duplicate[nums[left]] = false;
+                sum = sum - nums[left];
                 left++;
             }
-        }
-        return maximum;
+
+            sum = sum + nums[i];
+            duplicate[nums[i]] = true;
         
+
+             // if window exceeds k, shrink it
+            if (i - left + 1 > k) {
+                duplicate[nums[left]] = false;
+                sum -= nums[left];
+                left++;
+            }
+                if (i - left + 1 == k) {
+                maximum = Math.max(maximum, sum);
+                
+            }
+        }
+        return maximum == Long.MIN_VALUE ? 0 : maximum;
+        }
+    }
+
         
                 /**map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
 Meaning:
@@ -33,10 +45,7 @@ Finally, map.put(nums[i], …) updates the map with the new count. */
             
 
                 
-            }
-        }
-
-
+            
 
 
 
