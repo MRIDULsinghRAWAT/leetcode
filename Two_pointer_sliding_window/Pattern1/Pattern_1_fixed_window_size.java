@@ -16,9 +16,4 @@ public class Pattern_1_fixed_window_size {
         return maxSum;
     }
     
-    public static void main(String[] args) {
-        int[] arr = {1, 4, 2, 10, 2, 3, 1, 0, 20};
-        int k = 4;
-        System.out.println("Maximum sum of subarray of size " + k + ": " + maxSumSubarray(arr, k));
-    }
 }
