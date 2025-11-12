@@ -29,6 +29,9 @@ public class leetcode_2461 {
         return maximum == Long.MIN_VALUE ? 0 : maximum;
         }
     }
+    /**
+     * https://leetcode.com/problems/maximum-erasure-value/
+     */
 
         
                 /**map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);

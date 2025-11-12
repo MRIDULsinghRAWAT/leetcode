@@ -9,10 +9,14 @@ public int totalFruit(int[] fruits) {
 
 
    }
+    return max;
     
     }
 }    
 
+/**
+ * https://leetcode.com/problems/fruit-into-baskets/
+ */
 /**Took me damn long to understand the problem. 
  * Basically it's just: "Find the longest continuous 
  * sub array

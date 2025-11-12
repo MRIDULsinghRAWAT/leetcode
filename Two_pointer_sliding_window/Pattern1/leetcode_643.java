@@ -19,3 +19,6 @@ for(int i=0;i<nums.length;i++){
     }
 
 }
+/**
+ * https://leetcode.com/problems/maximum-average-subarray-i/
+ */
