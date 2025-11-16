@@ -16,7 +16,7 @@ public class leetcode_209 {
             }
         }
 return minimum==Integer.MAX_VALUE?0:minimum;
-// handles the edge case 
+// this  handles the edge case 
 
     }
 }
