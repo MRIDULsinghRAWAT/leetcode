@@ -1,5 +1,4 @@
 public class leetcode_142 {
-    // simple ListNode definition compatible with LeetCode problems
     public static class ListNode {
         int val;
         ListNode next;
@@ -33,3 +32,11 @@ return null;
     }
 
 }
+// checking of exact node where the cycle begins 
+/**Use slow and fast pointers to check if a cycle exists (fast moves 2 steps, slow 1 step).
+
+When they meet, it confirms a cycle is present.
+
+Now start one pointer from head and one from the meeting point.
+
+The point where both meet again is the start of the cycle. */
