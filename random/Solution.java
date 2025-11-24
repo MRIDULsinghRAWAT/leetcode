@@ -1,3 +1,4 @@
+package random;
 public class Solution {
     public int maxFrequencyElements(int[] nums) {
         // Map<Integer,Integer> map = new HashMap<>();

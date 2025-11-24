@@ -1,3 +1,4 @@
+package random;
 class Solution {
     public int strStr(String haystack, String needle) {
     
