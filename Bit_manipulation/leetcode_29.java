@@ -1,14 +1,20 @@
 public class leetcode_29 {
     
     public int divide(int dividend, int divisor) {
-    int sum=0;
-    int count=0;
-    while(sum+divisor <=dividend){
-        count=count+1;
-        sum=sum+divisor;
+if(dividend ==divisor) return 1;
 
-    }
-    return count ;
+
+
+
+
+    // int sum=0;
+    // int count=0;
+    // while(sum+divisor <=dividend){
+    //     count=count+1;
+    //     sum=sum+divisor;
+
+    // }
+    // return count ;
     
         // dividend =22
         //divisor =3
