@@ -11,7 +11,8 @@ public abstract class leetcode_136 {
     
     /**a ^ a = 0
 
-a ^ 0 = a */
+a ^ 0 = a
+ */
     }
 
 

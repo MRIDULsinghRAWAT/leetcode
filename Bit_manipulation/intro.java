@@ -1,5 +1,26 @@
 package Bit_manipulation;
 
 public class intro {
-    
+    /**
+// 1️ Left Shift  (<<)
+int a = 5;      // 0101 (binary)
+int b = a << 1; // 1010 = 10 (multiplies by 2)
+
+// 2️ Right Shift (>>)
+int c = 8;      // 1000
+int d = c >> 1; // 0100 = 4 (divides by 2)
+
+// 3️ Bitwise AND (&)
+int e = 6 & 3;  // 0110 & 0011 = 0010 → 2
+
+// 4️ Bitwise OR (|)
+int f = 6 | 3;  // 0110 | 0011 = 0111 → 7
+
+// 5️ Bitwise XOR (^)
+int g = 6 ^ 3;  // 0110 ^ 0011 = 0101 → 5
+
+// 6️ Bitwise NOT (~)
+int h = ~6;     // flips all bits → -7 (in 2’s complement)
+ */
+
 }
