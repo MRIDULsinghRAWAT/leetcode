@@ -3,6 +3,12 @@ public class leetcode_29 {
     public int divide(int dividend, int divisor) {
 if(dividend ==divisor) return 1;
 
+// overflow prevention 
+if(dividend ==Integer.MIN_VALUE && divisor ==-1) return Integer.MAX_VALUE;
+if(divisor==1) return dividend;
+
+
+
 
 
 
