@@ -24,4 +24,5 @@ int g = 6 ^ 3;  // 0110 ^ 0011 = 0101 → 5
 int h = ~6;     // flips all bits → -7 (in 2’s complement)
  */
 
+
 }
