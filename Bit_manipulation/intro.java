@@ -1,6 +1,7 @@
 package Bit_manipulation;
 
 public class intro {
+    // q se pheel isse thora dekh lio 
     /**
 // 1️ Left Shift  (<<)
 int a = 5;      // 0101 (binary)
