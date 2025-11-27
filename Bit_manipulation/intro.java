@@ -21,7 +21,7 @@ int f = 6 | 3;  // 0110 | 0011 = 0111 → 7
 int g = 6 ^ 3;  // 0110 ^ 0011 = 0101 → 5
 
 // 6️ Bitwise NOT (~)
-int h = ~6;     // flips all bits → -7 (in 2’s complement)
+int h = ~6;     // flips all bits → -7 (in 2’s complement)--
  */
 
 
