@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SYNTAX_PROG {
+public class 1SYNTAX_PROG {
     public static void main(String[] args) {
 
         Map<String, Integer> map = new HashMap<>();
