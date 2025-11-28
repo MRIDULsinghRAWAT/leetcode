@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class 1SYNTAX_PROG {
+public class 1_SYNTAX_PROG {
     public static void main(String[] args) {
 
         Map<String, Integer> map = new HashMap<>();
@@ -22,9 +22,15 @@ public class 1SYNTAX_PROG {
         }
 
         // 5. GET OR DEFAULT (safe access)
+    
+//It checks if the key exists — if it does, it returns its value; if not, it returns the default value you give.
+//So "Grapes" is not in the map, therefore it returns -1 instead of giving an error.
         int grapesPrice = map.getOrDefault("Grapes", -1);
         System.out.println("Price of Grapes = " + grapesPrice); // not present
 
+        //--------------------------------------------------
+
+        
         // 6. UPDATE VALUE (Frequency-like update)
         map.put("Apple", map.get("Apple") + 10);  // increased price
         System.out.println("Updated Apple Price = " + map.get("Apple"));
