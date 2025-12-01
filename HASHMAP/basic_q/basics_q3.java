@@ -12,12 +12,17 @@ import java.util.HashMap;
 public class basics_q3{
     public static void main(String[] args) {
         HashMap<String,Integer>map=new HashMap<>();
-        map.put(" apple",120);
-        map.put(" mango",190);
+        map.put("apple",120);
+        map.put("mango",190);
+        map.put("Banana", 40);
+
         System.out.println("price of apple"+map.get("apple"));
         map.put("mango",map.get("mango")+10);
+    System.out.println("is banana available ?"+map.containsKey("banana"));
+    
         System.out.println("final map="+map);
     
+
 
         
     }
