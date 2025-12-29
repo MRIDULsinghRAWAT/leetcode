@@ -7,6 +7,7 @@ public class swap {
         b=temp;
         System.out.println("swapped values are a:"+a+" b:"+b);
 
+        // s.swap(x,y);
     }
     
 }
