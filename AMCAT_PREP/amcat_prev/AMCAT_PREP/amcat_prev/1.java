@@ -1,4 +1,4 @@
-package AMCAT_PREP;
+package AMCAT_PREP.amcat_prev;
 
 //Count Pairs and Remaining Integers
 public class 1 {
