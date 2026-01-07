@@ -10,6 +10,19 @@ public class 1 {
         for(int i=0;i<n;i++){
             freq[arr[i]]++;
         }
+        int pairs=0;
+        int remaining=0;
+        for(int i=0;i<freq.length;i++)   // freq array me jaake 
+{
+    pairs=pairs+freq[i]/2;   // pairs count 
+    remaining=remaining+freq[i]%2; // remaining count
+}  
+      
+        System.out.println(pairs+" "+remaining);
+}
+}
+
+
         //logic:
         // counting pairs and remaining integers
         // pairs = sum of freq[i] / 2 for all i 
@@ -20,9 +33,9 @@ public class 1 {
 
 
         
-    }
+    
 
-}
+
     /*A company transmits a message consisting of integers. The transmission system can only send pairs of identical integers 
     (exactly two at a time). The process continues until no more such pairs can be formed.
 
@@ -52,7 +65,7 @@ input :
 1 1 1 1 2 2 2 3 3 4
 output:
 5 1
- explaination:
+explaination:
 Pairs formed: (1,1), (1,1), (2,2), (2,2), (3,3)
 Remaining integer: 4
 
