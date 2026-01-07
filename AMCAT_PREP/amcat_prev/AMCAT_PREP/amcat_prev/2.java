@@ -12,5 +12,13 @@ A string S.
 Output:
 Each character followed by ':' and its count.
  */
+    public static void main(String[] args) {
+        String str="abacbda";
+        int[] freq=new int[26]; // 26 lowercase letters
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            freq[ch-'a']++; // frequency count
+
+        }
     
-}
+
