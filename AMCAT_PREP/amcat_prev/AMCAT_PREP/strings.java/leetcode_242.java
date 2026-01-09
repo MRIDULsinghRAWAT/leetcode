@@ -2,21 +2,20 @@ package AMCAT_PREP.strings.java;
 
 public class leetcode_242 {
     public boolean isAnagram(String s, String t) {
-        if(s.length()!=t.length()) return false;
-        HashMap<Character,Integer> map=new HashMap<>();
-        for(int i=0;i<s.length();i++){
-            for(int j=0;j<t.length();j++){
-                if(map.containsKey("s")){
-                    return true;
-                }
+       //logic change to arrays
+       // sort them 
+       //compare -> if equal true.
+       char[] ch1=s.toCharArray();
+       char[]ch2=t.toCharArray();
+       Arrays.sort(ch1);
+       Arrays.sort(ch2);
+       if(Arrays.equals(ch1,ch2)){
 
-            }
-            return false;
-        }
-    // logic :
-    //i will use hashmap 
-    // 
-
+        return true;
+    }return false;
+}
+} 
+  
 
 
     /**Example 1:
@@ -24,5 +23,4 @@ public class leetcode_242 {
 Input: s = "anagram", t = "nagaram"
 
 Output: true */
-}
-}
+
