@@ -1,20 +1,21 @@
 package 1_PATTERN_WISE_DSA.1_Two_pointer;
 
 public class leetcode_26 {
-   public int removeDuplicates(int[]nums){
+public int removeDuplicates(int[]nums){
     // this is sorted-> we have recognized that we can use 2 pointer
-    
-    //[1,1,2,4]
-    int left=0;
-    int right=nums.length-1;
-    while(left<right){
-        if(nums[left]==nums[left+1]){ 
-            right--;
+      int i=0; // slow pointer
+    for(int j=1;j<nums.length;j++){ // fast pointer
+        if(nums[i]!=nums[j]){
+            i++;
+            nums[i]=nums[j];
         }
-        else{
-            left++;
-        } 
-   } 
-    return left+1; // length of unique elements
     }
-
+    return i+1;
+}
+}
+/** dry run
+ * nums=[0,0,1,1,1,2,2,3,3,4]
+ * i=0
+ * j=1
+ * nums[0]==nums[1] -> skip
+ */
