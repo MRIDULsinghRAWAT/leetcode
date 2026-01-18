@@ -13,9 +13,3 @@ public int removeDuplicates(int[]nums){
     return i+1;
 }
 }
-/** dry run
- * nums=[0,0,1,1,1,2,2,3,3,4]
- * i=0
- * j=1
- * nums[0]==nums[1] -> skip
- */
