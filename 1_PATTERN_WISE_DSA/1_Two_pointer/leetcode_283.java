@@ -5,7 +5,18 @@ public class leetcode_283 {
         // how to find we can use 2 pointer in this ?
         // same array modify hora h 
         // isis;liye
-        
+        int left=0;
+        for(int right=0;right<nums.length;right++){
+            if(nums[right]!=0){
+                nums[right]=nums[left]; //
+                left++;
+            }
+        }
+while(left<nums.length){
+    nums[left]=0;
+    left++;
+}
+
         
         
         
