@@ -74,7 +74,9 @@ if (fruits == null || fruits.length == 0) return 0;
 
             max = Math.max(max, i - left + 1);
         }
-
         return max;
     }
 }
+
+
+
