@@ -1,7 +1,7 @@
 package Array_and_hashing;
 import java.util.*;
 
-public class TwoSum { 
+public class twosum { 
     
     public int[] twoSum(int[] num, int target) { 
     HashMap<Integer, Integer> map = new HashMap<>(); 
@@ -26,7 +26,7 @@ public class TwoSum {
 }
     
     public static void main(String[] args) {
-        TwoSum ts = new TwoSum();
+        twosum ts = new twosum();
         int[] nums = {2, 7, 11, 15};
         int[] result = ts.twoSum(nums, 9);
         System.out.println(Arrays.toString(result)); // Output: [0, 1]
