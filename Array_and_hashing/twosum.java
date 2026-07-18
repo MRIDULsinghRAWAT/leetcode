@@ -32,3 +32,11 @@ public class twosum {
         System.out.println(Arrays.toString(result)); // Output: [0, 1]
     }
 }
+/**1. Two Sum (Search & Return)
+Yahan hum ek hi baar map ka use karte hain dhoondhne ke liye:
+
+Pehle check karo: Kya target - current_number map mein hai? (map.containsKey)
+
+Agar mil gaya: Index wapas nikaalo (map.get).
+
+Agar nahi mila: Tabhi map.put karo taaki aage ke liye save ho jaye. */
