@@ -11,13 +11,13 @@ package random;
  * }
  */
 public class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public reverse getIntersectionNode(reverse headA, reverse headB) {
 
 // using 2 pointer  
 
 // 2 pointer bna dete hai phel to 
-ListNode a= headA;    // length of a
-ListNode b = headB;    // length of  b 
+reverse a= headA;    // length of a
+reverse b = headB;    // length of  b 
 
 // traverse 
 while(a!=b){

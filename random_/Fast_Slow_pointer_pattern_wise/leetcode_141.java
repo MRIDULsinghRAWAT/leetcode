@@ -11,7 +11,7 @@
  */
 public class leetcode_141 {
 
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(reverse head) {
      //  cycle hogi to True warna False   
 
 // LETS LEARN 
@@ -33,8 +33,8 @@ IF (slow ==fast )  ///////////////////////
  */
 
  
-ListNode slow = head;
-ListNode fast =head;
+reverse slow = head;
+reverse fast =head;
 while(fast!=null && fast.next!= null)
 {
 fast=fast.next.next;  // 2 step
