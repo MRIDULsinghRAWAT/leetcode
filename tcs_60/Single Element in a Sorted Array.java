@@ -1,6 +1,11 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
         //O(log n)
+        /**Pattern: Single element se pehle saare pairs hamesha (even, odd) index par hote hain, 
+         * aur uske aate hi pattern tut kar (odd, even) ho jata hai.
+
+Search: Hum binary search (mid ^ 1) se yahi check karte hain—agar pattern intact hai toh iska matlab
+ single element aage (right) hai, warna peeche (left) hai. */
         int l = 0;
         int r = nums.length - 1;
         while (l < r) {
