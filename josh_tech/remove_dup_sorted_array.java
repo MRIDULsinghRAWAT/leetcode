@@ -10,3 +10,5 @@ class Solution {
         return unique;
     }
 }
+/**Sirf naya (unique) number milne par hi usko array ke front mein shift karke pointer badhao, 
+ * baaki saare continuous duplicates ko bas ignore (skip) karte jao. */
