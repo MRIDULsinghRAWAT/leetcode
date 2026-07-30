@@ -4,10 +4,10 @@
  * Result: Sabhi pairs cancel hone ke baad sirf missing number bach jata hai. */
 class Solution {
     public int missingNumber(int[] nums) {
-        int n=nums.length;
+        int n = nums.length;
         int xor = n;
         for (int i = 0; i < n; i++) {
-            xor = nums[i] ^ xor ^ i;
+            xor = xor ^ nums[i] ^ i; // a^a=0 so last mei missing hi bachega 
         }
         return xor;
     }
