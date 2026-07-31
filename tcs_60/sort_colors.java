@@ -1,5 +1,6 @@
 class Solution {
     public void sortColors(int[] nums) {
+        // 3 pointer  - dutch national algom
         int l = 0;
         int r = nums.length - 1;
         int mid=0;
